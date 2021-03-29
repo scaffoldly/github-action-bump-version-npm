@@ -2,7 +2,7 @@ name: Push to Main
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   bump-version:
     runs-on: ubuntu-latest
