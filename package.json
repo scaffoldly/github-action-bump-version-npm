@@ -1,22 +1,29 @@
 {
-  "name": "bump-version-action",
-  "version": "1.0.0",
-  "description": "Scaffoldly Bump Version Action",
+  "name": "gh-action-bump-version",
+  "version": "8.0.9",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phips28/gh-action-bump-version.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phips28/gh-action-bump-version/issues"
+  },
+  "homepage": "https://github.com/phips28/gh-action-bump-version#readme",
+  "private": true,
   "main": "index.js",
-  "repository": "git@github.com:scaffoldly/bump-version-action.git",
-  "author": "Christian Nuss",
-  "license": "GPL-3.0-or-later",
   "scripts": {
-    "build": "ncc build index.js --license licenses.txt",
-    "prepare": "yarn build",
-    "version": "git add -A dist",
-    "postversion": "git push origin HEAD:main && git push --follow-tags"
+    "start": "node ./index.js",
+    "test": "jest"
   },
   "dependencies": {
-    "@actions/core": "^1.2.6",
-    "@actions/github": "^4.0.0"
+    "actions-toolkit": "^2.2.0",
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.27.0"
+    "jest": "^25.2.7",
+    "standard": "^14.3.3"
   }
 }
